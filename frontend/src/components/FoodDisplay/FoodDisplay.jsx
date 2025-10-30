@@ -45,6 +45,7 @@ const FoodDisplayContainer = styled.div`
         row-gap: 50px;
       }
 
+
       .food-item-info{
         padding: 20px;
       }

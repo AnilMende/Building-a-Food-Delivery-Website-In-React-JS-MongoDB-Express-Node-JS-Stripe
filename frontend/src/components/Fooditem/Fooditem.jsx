@@ -68,6 +68,11 @@ const FoodItemContainer = styled.div`
       transition: 0.3s;
       animation: fadeIn 1s;
 
+      /* adding hover effect to the entire food-item */
+      &:hover{
+        transform: scale(1.05);
+      }
+
       .food-item-img{
         width: 100%;
         border-radius: 15px 15px 0px 0px;
@@ -127,4 +132,8 @@ const FoodItemContainer = styled.div`
       .food-item-counter img{
         width: 35px;
       }
+
+      /* .food-item-img-container:hover{
+        transform: scale(1.05);
+      } */
 `;

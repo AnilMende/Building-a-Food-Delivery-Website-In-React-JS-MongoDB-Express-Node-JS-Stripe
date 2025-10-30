@@ -10,23 +10,36 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // placing user order for frontend
 const placeOrder = async (req, res) => {
 
-    const frontend_url = "http://localhost:5174"
+    const frontend_url = "http://localhost:5173"
 
     try{
+        const {items, amount, address, paymentMethod} = req.body;
         // creating a new order
         const newOrder = new orderModel({
             userId:req.userId,
-            items:req.body.items,
-            amount:req.body.amount,
-            address:req.body.address
+            items,
+            amount,
+            address,
+            paymentMethod: paymentMethod || 'Stripe',
+            payment: paymentMethod === "COD" ? false : null, 
         })
         // save the new order in our database
         await newOrder.save();
-        // after new order we have to clear the cart data
-        await userModel.findByIdAndUpdate(req.userId, {cartData:{}});
 
-        // creating a payment link using the strive
-        
+        // after new order we have to clear the cart data
+        await userModel.findByIdAndUpdate(req.userId, { cartData:{} });
+
+        // if COD skip stripe
+        if(paymentMethod === "COD"){
+            return res.json({
+                success:true,
+                message:"Order placed successfully with cash on deliver",
+                cod:true
+                // orderId : newOrder._id
+            })
+        }
+
+        // stripe payment setup
         const line_items = req.body.items.map((item) => ({
 
              price_data:{
@@ -63,8 +76,8 @@ const placeOrder = async (req, res) => {
         res.json({success:true, session_url:session.url})
 
     }catch(error){
-        console.log(error);
-        res.json({success:false, message:"Error"});
+        console.log("Error Placing Order", error);
+        res.json({success:false, message:"Error Placing Order"});
     }
 }
 
@@ -95,7 +108,9 @@ const userOrders = async (req, res) => {
     try{
         // we will get all the orders from the userId
         // that will be stored in the orders variable
-        const orders = await orderModel.find({userId:req.userId});
+        // const orders = await orderModel.find({userId:req.userId});
+        // making the latest order to appear first
+        const orders = await orderModel.find({ userId: req.userId}).sort({ createdAt: -1});
         res.json({success:true, data:orders})
 
     }catch(error){

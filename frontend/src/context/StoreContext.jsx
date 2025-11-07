@@ -10,7 +10,8 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
 
     // backend url
-    const url = "http://localhost:4000";
+    // const url = "http://localhost:4000";
+    const url = "https://food-del-backend-pflt.onrender.com";
 
     const [token, setToken] = useState("");
 

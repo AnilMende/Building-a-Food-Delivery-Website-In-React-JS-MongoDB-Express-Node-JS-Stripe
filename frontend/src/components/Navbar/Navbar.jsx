@@ -25,7 +25,9 @@ const Navbar = ({ setShowLogin }) => {
         <NavbarContainer id="navbar">
             {/* If we click on the logo we get the home by using the route / */}
             <Link to="/">
-                <img src={assets.logo} className="logo" />
+                
+                {/* <img src={assets.logo} className="logo" /> */}
+                <p className="logo">TVANAMM</p>
             </Link>
 
 
@@ -90,6 +92,9 @@ const NavbarContainer = styled.div`
 
     .logo{
         width: 150px;
+        color: green;
+        font-weight: bold;
+        font-size: 40px;
     }
 
     .navbar-menu{

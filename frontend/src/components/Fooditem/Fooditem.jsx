@@ -71,6 +71,7 @@ const FoodItemContainer = styled.div`
       /* adding hover effect to the entire food-item */
       &:hover{
         transform: scale(1.05);
+        cursor: pointer;
       }
 
       .food-item-img{

@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 4000;
 
 
 app.use(cors({
-    origin:"*",
+    origin:"https://foodel-frontend-ui40.onrender.com",
     method:["GET", "POST", "PUSH", "PUT", "DELETE"],
     credentials:true
 }));

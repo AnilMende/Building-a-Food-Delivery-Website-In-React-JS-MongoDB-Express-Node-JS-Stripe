@@ -13,9 +13,14 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+
+app.use(cors({
+    origin:"*",
+    method:["GET", "POST", "PUSH", "PUT", "DELETE"],
+    credentials:true
+}));
 // middleware
 app.use(express.json());
-app.use(cors());
 
 // db connection
 connectDB();
@@ -27,6 +32,9 @@ app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
+app.get('/', (req,res) => {
+    res.send('CORS Fixed Successfully')
+})
 
 app.get("/", (req, res) => {
     res.send("API Working")

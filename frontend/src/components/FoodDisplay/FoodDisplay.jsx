@@ -12,7 +12,7 @@ const FoodDisplay = ({category}) => {
             <h2>Top Dishes For You</h2>
             <div className="food-display-list">
                 {
-                  food_list && food_list.length > 0 ? (
+                  
                     food_list.map((item, index) => {
                       //  console.log(category);
                        if(category === 'All' || category === item.category){
@@ -22,9 +22,6 @@ const FoodDisplay = ({category}) => {
                        }
                         
                     })
-                  ) : (
-                      <p>No Items Available</p>
-                    )
                 }
             </div>
         </FoodDisplayContainer>

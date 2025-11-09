@@ -5,3 +5,5 @@ export const connectDB = async () => {
                   .then(() => console.log("DB Connected"))
           
 }
+
+// mongodb+srv://anilmende2002_db_user:<db_password>@backenddb.tfmowwm.mongodb.net/

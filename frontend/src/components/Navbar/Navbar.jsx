@@ -94,7 +94,7 @@ const NavbarContainer = styled.div`
         width: 150px;
         color: green;
         font-weight: bold;
-        font-size: 40px;
+        font-size: 26px;
     }
 
     .navbar-menu{

@@ -1,0 +1,5 @@
+-> Designed and built a full-stack food delivery platform using MongoDB, Express, React, and Node.js following the MVC architecture.
+-> Integrated JWT authentication and bcrypt encryption for secure login and user data protection.
+-> Developed an Admin Panel for real-time order, menu, and user management using React hooks and context APIs.
+-> Implemented Stripe payment integration and deployed the app on Render, ensuring smooth end-to-end workflow.
+-> Applied modular and reusable components, improving maintainability and scalability of the project.

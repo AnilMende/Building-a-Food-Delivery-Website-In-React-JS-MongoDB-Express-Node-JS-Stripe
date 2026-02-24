@@ -9,7 +9,8 @@ const Footer = () => {
       <div className="footer-content">
 
         <div className="footer-content-left">
-          <img src={assets.logo} />
+          {/* <img src={assets.logo} /> */}
+          <p className="logo">TVANAMM</p>
           <p>Choose from a diverse menu featuring a dectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time</p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} />
@@ -32,13 +33,13 @@ const Footer = () => {
           <h2>GET IN TOUCH</h2>
           <ul>
             <li>+1-202-145-7890</li>
-            <li>contact@tomato.com</li>
+            <li>contact@tvanamm.com</li>
           </ul>
         </div>
       </div>
       <hr />
       <p className="footer-copy-right">
-        Copyright 2025 @ Tomato.com - All Rights Reserved
+        Copyright 2025 @ tvanamm.com - All Rights Reserved
       </p>
     </FooterContainer>
   )
@@ -47,7 +48,8 @@ export default Footer;
 
 const FooterContainer = styled.div`
       color: #d9d9d9;
-      background-color: #323232;
+      /* background-color: #323232; */
+      background-color: #4d4949;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -55,6 +57,13 @@ const FooterContainer = styled.div`
       padding: 20px 8vw;
       padding-top: 80px;
       margin-top: 100px;
+
+      .logo{
+        width: 150px;
+        color: #21bb21;
+        font-weight: bold;
+        font-size: 26px;
+    }
 
       .footer-content{
         width: 100%;

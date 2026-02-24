@@ -92,7 +92,7 @@ const NavbarContainer = styled.div`
 
     .logo{
         width: 150px;
-        color: green;
+        color: #21bb21;
         font-weight: bold;
         font-size: 26px;
     }

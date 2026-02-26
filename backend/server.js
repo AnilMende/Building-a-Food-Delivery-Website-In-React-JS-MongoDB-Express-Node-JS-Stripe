@@ -1,15 +1,15 @@
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
 
 import { connectDB } from './config/db.js';
 
 import foodRouter from './routes/foodRoutes.js';
 import userRouter from './routes/userRoute.js';
-import dotenv from 'dotenv';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
 
-dotenv.config();
 
 // app config
 const app = express();
@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 
 app.use(cors({
-    origin : "http://localhost:5173",
+    origin : "*",
     methods : ['GET', 'POST', 'PUT', 'DELETE'],
     credentials : true,
     optionsSuccessStatus : 200

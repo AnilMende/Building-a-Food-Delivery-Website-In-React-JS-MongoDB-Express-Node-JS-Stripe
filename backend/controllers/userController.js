@@ -4,9 +4,9 @@ import validator from 'validator';
 
 import userModel from '../models/userModel.js';
 
-const createToken = (user) => {
+const createToken = (id) => {
     return jwt.sign(
-        {id : user._id}, process.env.JWT_SECRET
+        {id}, process.env.JWT_SECRET
     )
 };
 
@@ -39,25 +39,21 @@ const registerUser = async (req, res) => {
         // our new passowrd is hashedPassowrd
 
         // creating a new user
-        const user = await userModel.create({
+        const newUser = new userModel({
             name : name,
             email : email,
             password : hashedPassword
         })
-        
-        // then save the newUser using await in a new user variable
-        await user.save({ validateBeforeSave : false });
 
-        const token = createToken(user);
+        const user = await newUser.save();
 
-        const createdUser = await userModel.findById(user._id).select("-password");
+        const token = createToken(user._id);
 
-        return res.status(200)
-        .json({ success: true, createdUser,token, message : "Registered Successfully" });
+        res.json({ success: true, token });
 
     } catch (error) {
-        //console.log(error);
-        return res.json({ success: false, message: error.message });
+        console.log(error);
+        res.json({ success: false, message: "Error" });
     }
 
 
@@ -87,18 +83,13 @@ const loginUser = async (req, res) => {
             res.json({ success: false, message: "Invalid Credentials" });
         }
 
-        await user.save({ validateBeforeSave : false });
+        const token = createToken(user._id);
 
-        const logginedUser = await userModel.findById(user._id).select("-password");
-
-        const token = createToken(user);
-
-        return res.status(200)
-        .json({ success: true, logginedUser,token, message : "User login successful" });
+        res.json({ success: true, token });
 
     }catch(error){
         console.log(error);
-        res.json({ success:false, message:error.message });
+        res.json({ success:false, message:"Error" });
     }
 }
 

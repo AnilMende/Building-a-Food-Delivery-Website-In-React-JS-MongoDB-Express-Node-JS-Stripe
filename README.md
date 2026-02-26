@@ -23,5 +23,8 @@ Libraris Installed For Backend:
 
 -> Applied modular and reusable components, improving maintainability and scalability of the project.
 
+-> Deployed Project on Render.
+
 ==> Projects Deployed URL : https://frontend-food-del-y3y9.onrender.com
+
 ==> Projects Admin Panel URL : https://food-del-admin-ueg0.onrender.com

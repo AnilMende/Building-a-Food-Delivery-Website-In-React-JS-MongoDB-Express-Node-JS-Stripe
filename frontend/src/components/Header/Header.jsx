@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 const Header = () => {
 
   return (
@@ -8,9 +7,12 @@ const Header = () => {
 
       <div className="header-contents">
         <h2>Order Your Favourite Food Here</h2>
-        <p>Choose from a diverse menu featuring a dectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time
+        <p>Choose from a diverse menu featuring a dectable array of dishes crafted with the finest ingredients and culinary expertise.
+          Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time
         </p>
-        <button>View Menu</button>
+        <a href="/#explore-menu">
+          <button>View Menu</button>
+        </a>
       </div>
     </HeaderContainer>
   )

@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import { assets } from "../../assets/assets";
-import { StoreContext } from "../../context/StoreContext";
+import { assets } from "../../assets/assets.js";
+import { StoreContext } from "../../context/StoreContext.jsx";
 
 const Fooditem = ({id,name,price,description,image}) => {
     
@@ -20,7 +20,7 @@ const Fooditem = ({id,name,price,description,image}) => {
                 that is url/images/imagename */}
                 <img className="food-item-img" src={url+"/images/"+image} alt="" />
                  {
-                  !cartItems[id]
+                  !cartItems?.[id]
                       ? <img className="add" 
                         //  onClick={() => setItemCount(prev => prev + 1)} 
                         onClick={() => addToCart(id)}

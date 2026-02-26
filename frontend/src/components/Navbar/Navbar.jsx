@@ -39,7 +39,7 @@ const Navbar = ({ setShowLogin }) => {
             </ul>
 
             <div className="navbar-right">
-                <img src={assets.search_icon} alt="" />
+                {/*<img src={assets.search_icon} alt="" /> */}
 
                 <div className="navbar-search-icon">
                     {/* we are adding the route /cart to the basket icon on clicking of the img we

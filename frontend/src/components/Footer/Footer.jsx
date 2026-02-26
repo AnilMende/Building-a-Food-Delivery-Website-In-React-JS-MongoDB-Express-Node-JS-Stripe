@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="footer-content-right">
           <h2>GET IN TOUCH</h2>
           <ul>
-            <li>+1-202-145-7890</li>
+            <li>+91 1234567899</li>
             <li>contact@tvanamm.com</li>
           </ul>
         </div>

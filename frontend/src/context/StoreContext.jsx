@@ -11,7 +11,6 @@ const StoreContextProvider = (props) => {
 
     // backend url
     const url = "http://localhost:4000";
-    // const url = "https://foodel-backend-urev.onrender.com"
 
     const [token, setToken] = useState("");
 

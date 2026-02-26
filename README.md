@@ -22,3 +22,6 @@ Libraris Installed For Backend:
 -> Implemented Stripe payment integration and deployed the app on Render, ensuring smooth end-to-end workflow.
 
 -> Applied modular and reusable components, improving maintainability and scalability of the project.
+
+==> Projects Deployed URL : https://frontend-food-del-y3y9.onrender.com
+==> Projects Admin Panel URL : https://food-del-admin-ueg0.onrender.com

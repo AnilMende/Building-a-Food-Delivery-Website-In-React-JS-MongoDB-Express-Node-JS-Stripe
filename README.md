@@ -9,7 +9,7 @@ Live Demo :  [ https://frontend-food-del-y3y9.onrender.com ]
 Admin Panel Url : [https://food-del-admin-ueg0.onrender.com]
 
  Demo Credentials:  
-- User: test@user.com / password  
+- User: anil1234567@gmail.com / anil1234567
 ---
 
 ## 📌 Problem Statement

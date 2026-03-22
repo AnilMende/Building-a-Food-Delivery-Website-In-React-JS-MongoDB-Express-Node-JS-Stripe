@@ -1,165 +1,162 @@
-# 🍔 Food Delivery Web Application
 
-A full-stack food delivery platform that allows users to browse restaurants, place orders, and manage deliveries efficiently. Built with a focus on scalability, user experience, and real-world backend challenges.
+# 🍔 Full-Stack Food Delivery Platform
 
----
-
-##  Live Demo
-Live Demo :  [ https://frontend-food-del-y3y9.onrender.com ]  
-Admin Panel Url : [https://food-del-admin-ueg0.onrender.com]
-
- Demo Credentials:  
-- User: anil1234567@gmail.com / anil1234567
----
-
-## 📌 Problem Statement
-
-Food delivery systems require efficient handling of:
-- High user traffic  
-- Real-time order management  
-- Secure payments and user authentication  
-
-This project aims to simulate a real-world food delivery platform with optimized backend operations and a seamless user experience.
+A scalable full-stack food delivery application built using the MERN stack, designed to handle real-world use cases such as user authentication, order management, admin control, and secure online payments.
 
 ---
 
-##  Features
+## 📌 Overview
 
-###  User Authentication
-- Secure login & registration (JWT-based)
-- Protected routes
-- User session management
+This project simulates a real-world food delivery system where users can browse menus, place orders, and make secure payments, while admins can manage products and orders efficiently.
 
----
-
-### 🍽️ Food & Restaurant Browsing
-- View restaurants and menus
-- Search and filter food items
-- Category-based navigation
+The backend is designed with a focus on **scalability, security, and modular architecture**, following best practices used in production systems.
 
 ---
 
-### 🛒 Cart & Order Management
-- Add/remove items from cart
-- Dynamic cart updates
-- Place orders with order summary
+## 🚀 Features
+
+### 👤 User Features
+
+* User registration & login with JWT authentication
+* Browse food items and categories
+* Add/remove items from cart
+* Place orders with real-time status updates
+* Secure online payments using Stripe
+
+### 🛠️ Admin Features
+
+* Admin dashboard for managing food items
+* Order management system
+* User management
 
 ---
 
-### 📦 Order Tracking (Basic / Extendable)
-- View order history
-- Track order status (Pending, Completed)
+## 🧱 Tech Stack
+
+### 🔹 Frontend
+
+* React.js
+* Redux
+* Tailwind CSS
+
+### 🔹 Backend
+
+* Node.js
+* Express.js
+* REST APIs
+* JWT Authentication
+
+### 🔹 Database
+
+* MongoDB
+* Mongoose
+
+### 🔹 Integrations
+
+* Stripe (Payment Gateway)
+* Cloudinary (Media Storage)
 
 ---
 
-###  Admin Panel
-- Add/edit/delete food items
-- Manage orders
-- Update order status
+## 🏗️ Backend Architecture
+
+The backend follows a **modular MVC architecture**:
+
+* **Controllers** → Handle request & response
+* **Services/Logic Layer** → Business logic
+* **Models** → Database schemas
+* **Middleware** → Authentication, validation, error handling
+
+This separation ensures:
+
+* Better scalability
+* Easier maintenance
+* Cleaner code structure
 
 ---
 
-### Backend Features
-- RESTful API design
-- Input validation & error handling
-- Middleware-based authentication
-- Secure data handling
+## 🔐 Authentication & Security
+
+* JWT-based authentication with protected routes
+* Password hashing for secure storage
+* Role-based access control (Admin/User)
+* Input validation and sanitization
+* Secure payment handling with Stripe
 
 ---
 
-## Tech Stack
+## 🔄 API Design
 
-### Frontend
-- React.js
-- Tailwind CSS / CSS
-- Axios
+* Designed **20+ RESTful APIs** for:
 
-### Backend
-- Node.js
-- Express.js
+  * Authentication
+  * User management
+  * Food items & categories
+  * Cart & orders
+  * Payment processing
 
-### Database
-- MongoDB (MongoDB Atlas)
+* Followed best practices:
 
-### Tools & Deployment
-- Git & GitHub
-- Vercel / Netlify (Frontend)
-- Render / Railway (Backend)
+  * Proper status codes
+  * Structured responses
+  * Error handling
 
 ---
 
-## System Design Overview
+## 💳 Payment Integration
 
-### Key Considerations:
-- **Scalability:** Modular backend for handling increasing users  
-- **Performance:** Efficient API calls and optimized database queries  
-- **Data Integrity:** Ensures correct order processing and storage  
+Integrated **Stripe Payment Gateway** to handle:
 
----
-
-## API Endpoints (Sample)
-
-### Auth
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-
-### Food
-- `GET /api/food`
-- `POST /api/food` (Admin)
-- `PUT /api/food/:id`
-- `DELETE /api/food/:id`
-
-### Cart
-- `POST /api/cart`
-- `GET /api/cart`
-- `DELETE /api/cart/:id`
-
-### Orders
-- `POST /api/orders`
-- `GET /api/orders/user`
-- `PUT /api/orders/:id` (Admin)
+* Secure transactions
+* Order confirmation after payment
+* Payment validation
 
 ---
 
-## 📂 Folder Structure
-/client → Frontend (React)
-/server
-├── controllers
-├── routes
-├── models
-├── middleware
-├── utils
+## ⚡ Performance Considerations
 
-## Future Improvements
-
-- Real-time order tracking using WebSockets  
-- Payment gateway integration (Stripe/Razorpay)  
-- Location-based delivery tracking  
-- Recommendation system using AI  
+* Optimized database queries using Mongoose
+* Efficient schema design for orders, users, and products
+* Modular structure to handle scaling easily
 
 ---
 
-## What I Learned
+## 🌍 Deployment
 
-- Building scalable REST APIs  
-- Managing application state and user flows  
-- Handling real-world scenarios like order lifecycle  
-- Structuring full-stack applications professionally  
+* Frontend deployed on Vercel
+* Backend deployed on Render
+* Cloud-based media handling using Cloudinary
 
 ---
 
-## Installation & Setup
+## 📚 What I Learned
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/food-delivery-app.git
+* Designing scalable backend systems using Node.js
+* Structuring large applications with MVC architecture
+* Implementing secure authentication & authorization
+* Integrating third-party services like Stripe
+* Handling real-world application workflows
 
-# Install dependencies
-cd server
-npm install
+---
 
-cd client
-npm install
+## 🔗 Live Links
 
-# Run application
-npm run dev
+* 🌐 Frontend: https://frontend-food-del-y3y9.onrender.com
+* 💻 Backend: https://production-backend-system-3.onrender.com/
+* 📂 GitHub: https://github.com/AnilMende
+
+---
+
+## ⚠️ Future Improvements
+
+* Add Redis caching for performance optimization
+* Implement rate limiting for API protection
+* Improve UI/UX and responsiveness
+* Add unit and integration testing
+
+---
+
+## 👨‍💻 Author
+
+Anil Kumar Mende
+Backend-focused Full Stack Developer

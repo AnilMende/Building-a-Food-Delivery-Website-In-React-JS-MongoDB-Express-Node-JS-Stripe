@@ -141,7 +141,7 @@ Integrated **Stripe Payment Gateway** to handle:
 
 ## 🔗 Live Links
 
-* 🌐 Frontend: https://frontend-food-del-y3y9.onrender.com
+* 🌐 Frontend: https://food-delivery-application-ashy.vercel.app/
 * 💻 Backend: https://production-backend-system-3.onrender.com/
 * 📂 GitHub: https://github.com/AnilMende
 

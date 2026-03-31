@@ -142,6 +142,7 @@ Integrated **Stripe Payment Gateway** to handle:
 ## 🔗 Live Links
 
 * 🌐 Frontend: https://food-delivery-application-ashy.vercel.app/
+* 🌐 Admin Dashboard : https://food-delivery-admin-gamma-roan.vercel.app/
 * 💻 Backend: https://production-backend-system-3.onrender.com/
 * 📂 GitHub: https://github.com/AnilMende
 
